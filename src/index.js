@@ -6,13 +6,17 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { UserProvider } from "./Providers/User/userProvider";
 import { ToDoProvider } from "./Providers/ToDos/toDoProvider";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./theme";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ToDoProvider>
         <UserProvider>
-          <App />
+          <ThemeProvider theme={theme}>
+            <App />
+          </ThemeProvider>
         </UserProvider>
       </ToDoProvider>
     </BrowserRouter>
