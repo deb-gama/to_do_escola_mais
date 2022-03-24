@@ -38,4 +38,9 @@ export const CardsContainer = styled.div`
     font-size: 1rem;
     color: ${(props) => props.theme.colors.bg_box};
   }
+
+  h2 {
+    font-family: ${(props) => props.theme.fonts.h2_font};
+    weight: ${(props) => props.theme.fonts.h2_weight};
+  }
 `;
