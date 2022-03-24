@@ -19,7 +19,7 @@ export const UserPage = () => {
         setToDos(response.data);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [toDos]);
 
   return (
     <CardsContainer>

@@ -28,7 +28,7 @@ export const ToDoCard = ({ toDos, handleOk, createToDo }) => {
           </div>
         </TodoCardContainer>
       ))}
-      {modalOpen && <Modal onClose={onClose} />}
+      {modalOpen && <Modal onClose={onClose} setModalOpen={setModalOpen} />}
     </>
   );
 };
