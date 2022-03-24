@@ -1,13 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ToDoCard } from "../../components/ToDoCard";
+import { ToDoContext } from "../../Providers/ToDos/toDoProvider";
 import { UserContext } from "../../Providers/User/userProvider";
 import api from "../../services/api";
 
 export const UserPage = () => {
   const params = useParams();
-  const [toDos, setToDos] = useState([]);
   const { users } = useContext(UserContext);
+  const { toDos, setToDos } = useContext(ToDoContext);
   const user = users.find((item) => item.id.toString() === params.user_id);
 
   useEffect(() => {
