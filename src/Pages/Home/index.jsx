@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UserList } from "../../components/UserList";
+import { UserContext } from "../../Providers/User/userProvider";
 import api from "../../services/api";
 
 export const Home = () => {
-  const [users, setUsers] = useState([]);
+  const { users, setUsers } = useContext(UserContext);
 
   useEffect(() => {
     api
