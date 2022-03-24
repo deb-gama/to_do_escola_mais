@@ -26,7 +26,7 @@ export const UserPage = () => {
   return (
     <>
       <CardsContainer>
-        <h1>Bem vindo {user.name}! Aqui está sua To Do List:</h1>
+        <h1>Olá {user.name}! Aqui está sua To Do List:</h1>
         <div className="toDoContainer">
           <ToDoCard toDos={toDos} />
         </div>

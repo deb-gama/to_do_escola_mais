@@ -17,7 +17,6 @@ export const TodoCardContainer = styled.div`
     width: 40px;
     height: 40px;
     margin-right: 5px;
-    margin-top: 65px;
     border: none;
     border-radius: 8px;
   }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../../services/api";
+import { InputContainer } from "./styles";
 
 export const InputCheck = ({ toDo }) => {
   const [open, setOpen] = useState(true);
@@ -32,7 +33,7 @@ export const InputCheck = ({ toDo }) => {
   };
 
   return (
-    <>
+    <InputContainer>
       {toDo.completed ? (
         <label>
           <input
@@ -40,7 +41,7 @@ export const InputCheck = ({ toDo }) => {
             checked={toDo.completed}
             onChange={() => handleToDo(toDo.id, toDo.completed)}
           />
-          OK
+          <p className="done">Ok</p>
         </label>
       ) : (
         <label>
@@ -49,9 +50,9 @@ export const InputCheck = ({ toDo }) => {
             checked={toDo.completed}
             onChange={() => handleOk(toDo.id, toDo.completed)}
           />
-          TO DO
+          <p className="toDo">To Do</p>
         </label>
       )}
-    </>
+    </InputContainer>
   );
 };
