@@ -17,4 +17,4 @@ FAKE-API: As requisições foram testadas e funcionam adequadamente, mas não é
 # Uso
 
 Selecione o usuário para exibir a dashboard com as To Dos cadastradas. Use o checkbox para marcar uma tarefa como realizada ou a realizar. Seu status é visualmente alterado automaticamente.
-Para adicionar uma nova tarefa, basta clicar no botão presente nos cards.
+Para adicionar uma nova tarefa, basta clicar no botão Add a To Don parte inferior do dashboard.
