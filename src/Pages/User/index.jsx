@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { ToDoCard } from "../../components/ToDoCard";
 import { UserContext } from "../../Providers/User/userProvider";
 import api from "../../services/api";
 
@@ -21,6 +22,7 @@ export const UserPage = () => {
   return (
     <div>
       <h1>Bem vindo {user.name}! Aqui está sua To Do List:</h1>
+      <ToDoCard toDos={toDos} />
     </div>
   );
 };
