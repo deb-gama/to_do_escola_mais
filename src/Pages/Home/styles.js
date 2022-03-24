@@ -33,7 +33,7 @@ export const HomeContainer = styled.div`
   }
 
   a:hover {
-    cursor: pointer;home
+    cursor: pointer;
     color: ${(props) => props.theme.colors.green};
   }
 `;

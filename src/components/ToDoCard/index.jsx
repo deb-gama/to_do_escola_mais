@@ -20,7 +20,7 @@ export const ToDoCard = ({ toDos, handleOk }) => {
           <InputCheck toDo={toDo} handleOk={() => handleOk(toDo.id)} />
           <div className="btn-container">
             <button className="btn_create" onClick={() => setModalOpen(true)}>
-              <RiAddCircleFill size={25} />
+              <RiAddCircleFill size={30} />
             </button>
           </div>
         </TodoCardContainer>
