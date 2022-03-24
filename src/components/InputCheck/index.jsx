@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useState } from "react";
 import api from "../../services/api";
 
@@ -7,7 +6,6 @@ export const InputCheck = ({ toDo }) => {
   const [check, setCheck] = useState(false);
 
   const updateStatus = (toDo_id, status) => {
-    // setStatus(!status);
     api
       .patch(`https://jsonplaceholder.typicode.com/posts/${toDo_id}`, {
         body: JSON.stringify({
@@ -17,7 +15,7 @@ export const InputCheck = ({ toDo }) => {
           "Content-type": "application/json; charset=UTF-8",
         },
       })
-      .then((response) => console.log(toDo_id, response))
+      .then((response) => console.log(response.data))
       .catch((error) => console.log(error));
   };
 
@@ -32,6 +30,7 @@ export const InputCheck = ({ toDo }) => {
     updateStatus(toDo_id, check);
     toDo.completed = false;
   };
+
   return (
     <>
       {toDo.completed ? (
