@@ -6,13 +6,17 @@ import { UserContext } from "../../Providers/User/userProvider";
 import api from "../../services/api";
 import { CardsContainer } from "./styles";
 import { useHistory } from "react-router-dom";
+import { useState } from "react";
 
 export const UserPage = () => {
+  const [modalOpen, setModalOpen] = useState(true);
   const params = useParams();
   const { users } = useContext(UserContext);
   const { toDos, setToDos } = useContext(ToDoContext);
   const user = users.find((item) => item.id.toString() === params.user_id);
   const history = useHistory();
+
+  console.log(modalOpen);
 
   useEffect(() => {
     api
@@ -28,11 +32,19 @@ export const UserPage = () => {
       <CardsContainer>
         <h1>Olá {user.name}! Aqui está sua To Do List:</h1>
         <div className="toDoContainer">
-          <ToDoCard toDos={toDos} />
+          <ToDoCard
+            toDos={toDos}
+            setModalOpen={setModalOpen}
+            modalOpen={modalOpen}
+          />
         </div>
         <span>
           <button className="backToHome" onClick={() => history.push("/")}>
             Home
+          </button>
+
+          <button className="btn_create" onClick={() => setModalOpen(true)}>
+            Add ToDo
           </button>
         </span>
       </CardsContainer>

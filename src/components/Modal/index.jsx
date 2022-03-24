@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ModalContainer } from "./styles";
 import { useParams } from "react-router-dom";
 
-export const Modal = ({ onClose }) => {
+export const Modal = ({ onClose, setModalOpen }) => {
   const [inputValue, setInputValue] = useState("");
   const params = useParams();
 
@@ -22,7 +22,6 @@ export const Modal = ({ onClose }) => {
       .then(() => onClose());
   };
 
-  console.log(inputValue);
   return (
     <ModalContainer>
       <span onClick={onClose}>X</span>

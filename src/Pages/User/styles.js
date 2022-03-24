@@ -43,4 +43,21 @@ export const CardsContainer = styled.div`
     font-family: ${(props) => props.theme.fonts.h2_font};
     weight: ${(props) => props.theme.fonts.h2_weight};
   }
+
+  .btn_create {
+    width: 250px;
+    height: 40px;
+    margin: 20px;
+    background-color: ${(props) => props.theme.colors.green};
+    border-radius: 8px;
+    border: none;
+    font-family: ${(props) => props.theme.fonts.h2_font};
+    font-weight: ${(props) => props.theme.fonts.h1_weight};
+    font-size: 1rem;
+    color: ${(props) => props.theme.colors.bg_box};
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
 `;

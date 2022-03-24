@@ -1,13 +1,8 @@
 import { TodoCardContainer } from "./styles";
-import { RiAddCircleFill } from "react-icons/ri";
 import { InputCheck } from "../InputCheck";
-import { useState } from "react";
 import { Modal } from "../Modal";
 
-export const ToDoCard = ({ toDos, handleOk }) => {
-  const [modalOpen, setModalOpen] = useState(false);
-  console.log(toDos);
-
+export const ToDoCard = ({ toDos, handleOk, setModalOpen, modalOpen }) => {
   const onClose = () => {
     setModalOpen(false);
   };
@@ -18,14 +13,9 @@ export const ToDoCard = ({ toDos, handleOk }) => {
         <TodoCardContainer key={toDo.id}>
           <h2>{toDo.title}</h2>
           <InputCheck toDo={toDo} handleOk={() => handleOk(toDo.id)} />
-          <div className="btn-container">
-            <button className="btn_create" onClick={() => setModalOpen(true)}>
-              <RiAddCircleFill size={30} />
-            </button>
-          </div>
         </TodoCardContainer>
       ))}
-      {modalOpen && <Modal onClose={onClose} setModalOpen={setModalOpen} />}
+      {modalOpen && <Modal onClose={onClose} />}
     </>
   );
 };
