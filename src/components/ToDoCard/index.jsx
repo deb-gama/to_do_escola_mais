@@ -1,8 +1,12 @@
+import { TodoCardContainer } from "./styles";
+
 export const ToDoCard = ({ toDos }) => {
   return toDos.map((toDo) => (
-    <div key={toDo.id}>
-      <h1>{toDo.title}</h1>
+    <TodoCardContainer key={toDo.id}>
+      <h2>{toDo.title}</h2>
       {toDo.completed ? <span>OK</span> : <span>TO DO</span>}
-    </div>
+      <button>New</button>
+      <button>Delete</button>
+    </TodoCardContainer>
   ));
 };

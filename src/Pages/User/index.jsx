@@ -4,6 +4,7 @@ import { ToDoCard } from "../../components/ToDoCard";
 import { ToDoContext } from "../../Providers/ToDos/toDoProvider";
 import { UserContext } from "../../Providers/User/userProvider";
 import api from "../../services/api";
+import { CardsContainer } from "./styles";
 
 export const UserPage = () => {
   const params = useParams();
@@ -21,9 +22,11 @@ export const UserPage = () => {
   }, []);
 
   return (
-    <div>
+    <CardsContainer>
       <h1>Bem vindo {user.name}! Aqui está sua To Do List:</h1>
-      <ToDoCard toDos={toDos} />
-    </div>
+      <div className="toDoContainer">
+        <ToDoCard toDos={toDos} />
+      </div>
+    </CardsContainer>
   );
 };
