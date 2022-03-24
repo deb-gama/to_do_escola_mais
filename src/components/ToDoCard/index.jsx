@@ -1,10 +1,10 @@
 import { TodoCardContainer } from "./styles";
-import { RiDeleteBin6Fill, RiAddCircleFill } from "react-icons/ri";
+import { RiAddCircleFill } from "react-icons/ri";
 import { InputCheck } from "../InputCheck";
 import { useState } from "react";
 import { Modal } from "../Modal";
 
-export const ToDoCard = ({ toDos, handleOk, createToDo }) => {
+export const ToDoCard = ({ toDos, handleOk }) => {
   const [modalOpen, setModalOpen] = useState(false);
   console.log(toDos);
 

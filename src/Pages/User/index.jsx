@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ToDoCard } from "../../components/ToDoCard";
 import { ToDoContext } from "../../Providers/ToDos/toDoProvider";
 import { UserContext } from "../../Providers/User/userProvider";
 import api from "../../services/api";
 import { CardsContainer } from "./styles";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export const UserPage = () => {
   const params = useParams();

@@ -7,8 +7,8 @@ export const CardsContainer = styled.div`
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    max-width: 90vw;
-    max-height: 80vh;
+    max-width: 85vw;
+    height: 83vh;
     overflow: scroll;
     flex-wrap: wrap;
     color: ${(props) => props.theme.colors.font_black};
