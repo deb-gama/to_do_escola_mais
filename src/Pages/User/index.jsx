@@ -9,14 +9,12 @@ import { useHistory } from "react-router-dom";
 import { useState } from "react";
 
 export const UserPage = () => {
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const params = useParams();
   const { users } = useContext(UserContext);
   const { toDos, setToDos } = useContext(ToDoContext);
   const user = users.find((item) => item.id.toString() === params.user_id);
   const history = useHistory();
-
-  console.log(modalOpen);
 
   useEffect(() => {
     api
